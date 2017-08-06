@@ -1,0 +1,8 @@
+{
+  "name": "elm-knit",
+  "version": "0.0.1",
+  "description": "An elm webapp boilerplate.",
+  "main": "index.js",
+  "author": "<mdaquel@gmail.com>",
+  "license": "MIT"
+}
