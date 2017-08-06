@@ -1,1 +1,2 @@
-elm-knit
+# elm-knit
+An elm webapp boilerplate.
