@@ -1,41 +1,20 @@
 module Main exposing (..)
 
 import Html exposing (Html, div, text, program)
+import App as App exposing (initModel, Model)
 
 
--- MODEL
-
-
-type alias Model =
-    String
-
-
-init : ( Model, Cmd Msg )
+init : ( App.Model, Cmd Msg )
 init =
-    ( "Hello", Cmd.none )
-
-
-
--- MESSAGES
-
+    ( App.initModel, Cmd.none )
 
 type Msg
     = NoOp
-
-
-
--- VIEW
-
 
 view : Model -> Html Msg
 view model =
     div []
         [ text model ]
-
-
-
--- UPDATE
-
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
@@ -43,19 +22,9 @@ update msg model =
         NoOp ->
             ( model, Cmd.none )
 
-
-
--- SUBSCRIPTIONS
-
-
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
-
-
-
--- MAIN
-
 
 main : Program Never Model Msg
 main =
